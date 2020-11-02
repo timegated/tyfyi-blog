@@ -1,0 +1,27 @@
+{
+  "name": "djb-blog",
+  "version": "1.0.0",
+  "description": "Cataloguing my knowledge and experiences in the Javascript ecosystem.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build":"next build",
+    "start":"next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timegated/djb-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timegated/djb-blog/issues"
+  },
+  "homepage": "https://github.com/timegated/djb-blog#readme",
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
