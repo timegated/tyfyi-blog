@@ -1,27 +1,30 @@
 {
-  "name": "djb-blog",
+  "name": "tyfyi-blog",
   "version": "1.0.0",
   "description": "Cataloguing my knowledge and experiences in the Javascript ecosystem.",
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build":"next build",
-    "start":"next start"
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/timegated/djb-blog.git"
+    "url": "git+https://github.com/timegated/tyfyi-blog.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/timegated/djb-blog/issues"
+    "url": "https://github.com/timegated/tyfyi-blog/issues"
   },
-  "homepage": "https://github.com/timegated/djb-blog#readme",
+  "homepage": "https://github.com/timegated/tyfyi-blog#readme",
   "dependencies": {
+    "gray-matter": "^4.0.2",
     "next": "^10.0.0",
+    "raw-loader": "^4.0.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3"
   }
 }
