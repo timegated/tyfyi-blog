@@ -1,6 +1,9 @@
 import React from 'react';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown/with-html';
+import Layout from '../../components/common/layout';
+import CodeBlock from '../../components/common/codeblock';
+import Link from 'next/link';
 
 const PostTemplate = ({ content, data }) => {
 
@@ -8,8 +11,21 @@ const PostTemplate = ({ content, data }) => {
 
   return (
     <>
-      <h1>{frontmatter.title}</h1>
-      <ReactMarkdown source={ content } />
+      <Layout>
+        <h1>{frontmatter.title}</h1>
+        <ReactMarkdown source={content}
+          allowDangerousHtml
+          renderers={
+            {
+              code: CodeBlock,
+              link: ({ children, href }) =>
+              {
+                return <Link href={href}>
+                  <a>{children}</a>
+                </Link>
+              }
+            }} />
+      </Layout>
     </>
   );
 };
