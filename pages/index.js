@@ -1,17 +1,16 @@
-import Layout from '../components/common/layout';
-import Head from 'next/head';
-const Index = ({ title, description, ...props }) => {
+import Layout from '@components/common/layout';
+import PostList from '../components/PostList';
+import getPosts from '@utils/getPosts';
+
+const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
-      <Head>
-        <title>Thank You For Your Interest</title>
-      </Head>
-      <Layout>
+      <Layout pageTitle={title} description={description}>
         <h1>Thank You For Your Interest</h1>
-        <p style={{ color: 'darkgray', opacity: .8 }}>We know you're a talented developer</p>
-        <a href="http://localhost:3000/posts/last-resort-fix">A Last Resort Fix</a>
-        {" "}
-        <a href="http://localhost:3000/posts/all-about-closure">All About Closure</a>
+        <h6>We know you're a talented developer</h6>
+        <main>
+        <PostList posts={ posts }/>
+        </main>
       </Layout>
     </>
   )
@@ -22,8 +21,13 @@ export default Index;
 export async function getStaticProps() {
   const configData = await import('../siteconfig.json');
 
+  const posts = ((context) => {
+    return getPosts(context)
+  })(require.context('../posts', true, /\.md$/))
+
   return {
     props: {
+      posts,
       title: configData.default.title,
       description: configData.default.description
     }
