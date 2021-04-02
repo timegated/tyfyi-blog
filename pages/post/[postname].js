@@ -33,9 +33,11 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
 export async function getStaticProps ({ ...ctx }) {
   const { postname } = ctx.params
   
-  const content = await import(`../../content/${postname}.md`);
+  const content = await import(`../../posts/${postname}.md`);
   const config = await import(`../../siteconfig.json`);
   const data = matter(content.default);
+
+  console.group({postname, content})
 
   return {
     props: {

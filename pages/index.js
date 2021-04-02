@@ -3,6 +3,7 @@ import PostList from '../components/PostList';
 import getPosts from '@utils/getPosts';
 
 const Index = ({ posts, title, description, ...props }) => {
+  console.log('the props: ', props)
   return (
     <>
       <Layout pageTitle={title} description={description}>
