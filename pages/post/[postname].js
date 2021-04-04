@@ -7,8 +7,6 @@ import CodeBlock from '../../components/common/codeblock';
 import Link from 'next/link';
 
 const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
-
-  console.group(siteTitle, frontmatter, markdownBody);
   return (
     <>
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
@@ -36,8 +34,6 @@ export async function getStaticProps ({ ...ctx }) {
   const content = await import(`../../posts/${postname}.md`);
   const config = await import(`../../siteconfig.json`);
   const data = matter(content.default);
-
-  console.group({postname, content})
 
   return {
     props: {
