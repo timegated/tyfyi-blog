@@ -9,7 +9,7 @@ const Index = ({ posts, title, description, ...props }) => {
     <>
       <Layout pageTitle={title} description={description}>
         <Container>
-        <Banner title="Thank You For Your Interest" sub="We know you're a talented developer"/>
+        <Banner title="Thank You For Your Interest" sub="Examining what it takes to be frontend oriented"/>
           <main>
             <PostList posts={posts} />
           </main>
