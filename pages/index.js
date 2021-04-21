@@ -2,13 +2,14 @@ import Layout from '../components/common/layout';
 import PostList from '../components/PostList/PostList';
 import getPosts from '../utils/getPosts';
 import { Container } from '../components/globalStyles/global';
+import Banner from '../components/Banner/Banner';
+
 const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={title} description={description}>
         <Container>
-          <h1>Thank You For Your Interest</h1>
-          <h6>We know you're a talented developer</h6>
+        <Banner title="Thank You For Your Interest" sub="We know you're a talented developer"/>
           <main>
             <PostList posts={posts} />
           </main>

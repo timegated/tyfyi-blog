@@ -10,7 +10,7 @@ const theme = {
       grayfive: 'hsl(211, 27%, 70%)',
       graysix: 'hsl(210, 31%, 80%)',
       grayseven: 'hsl(212, 33%, 89%)',
-      grayseven: 'hsl(210, 36%, 96%)',
+      grayeight: 'hsl(210, 36%, 96%)',
     },
     accents: {
       primary: 'hsl(170, 97%, 15%)',
