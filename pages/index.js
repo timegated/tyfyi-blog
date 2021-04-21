@@ -1,5 +1,5 @@
 import Layout from '@components/common/layout';
-import PostList from '../components/PostList';
+import PostList from '../components/PostList/PostList';
 import getPosts from '@utils/getPosts';
 
 const Index = ({ posts, title, description, ...props }) => {

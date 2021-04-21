@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/timegated/tyfyi-blog#readme",
   "dependencies": {
+    "@types/next": "^9.0.0",
+    "@types/react": "^17.0.3",
+    "@zeit/next-typescript": "^1.1.1",
     "gray-matter": "^4.0.2",
     "next": "^10.0.0",
     "raw-loader": "^4.0.2",
