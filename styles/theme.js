@@ -25,6 +25,18 @@ const theme = {
       tealeight: 'hsl(152, 68%, 96%)',
     }
   },
+  font_size: {
+    xsm: '0.5rem',
+    sm: '0.75rem',
+    reg: '1rem',
+    md: '1.25rem',
+    lg: '2rem'
+  },
+  font_weight: {
+    light: '400',
+    bold: '600',
+    bolder: '800'
+  },
   screen: {
     xxsm: '320px',
     sm: '540px',
