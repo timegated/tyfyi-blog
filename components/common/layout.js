@@ -15,10 +15,10 @@ export default function Layout({ children, pageTitle, description, ...props }) {
           <meta name="Description" content={description} />
           <title>{pageTitle}</title>
         </Head>
-      <>
+  
         <GlobalStyles />
         {children}
-      </>
+     
     </ThemeProvider>
   )
 } 

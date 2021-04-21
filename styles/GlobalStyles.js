@@ -12,10 +12,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 0 auto;
     overflow-x: hidden;
-    
   }
 
   ::-webkit-scrollbar {

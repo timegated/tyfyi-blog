@@ -2,7 +2,7 @@ import React from 'react';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown/with-html';
 import Layout from '../../components/common/layout';
-import getSlugs from '@utils/getSlugs';
+import getSlugs from '../../utils/getSlugs';
 import CodeBlock from '../../components/common/codeblock';
 import Link from 'next/link';
 

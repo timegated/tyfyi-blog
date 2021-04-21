@@ -1,6 +1,4 @@
-const withTypescript = require('@zeit/next-typescript');
-
-module.exports = withTypescript({
+module.exports = {
   target: 'serverless',
   webpack: function (config) {
     config.module.rules.push({
@@ -9,4 +7,4 @@ module.exports = withTypescript({
     })
     return config;
   }
-});
+}

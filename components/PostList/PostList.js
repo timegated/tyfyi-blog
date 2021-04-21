@@ -6,7 +6,7 @@ const PostList = ({ posts }) => {
   return (
     <div>
       {!posts && <div>No Posts Yet!</div>}
-      <ul style={{listStyle: 'none'}}>
+      <ul style={{listStyle: 'none', margin:'0', border: '1px solid black'}}>
         {posts &&
           posts.map(post => (
             <li key={post.slug}>

@@ -1,9 +1,8 @@
-import Layout from '@components/common/layout';
+import Layout from '../components/common/layout';
 import PostList from '../components/PostList/PostList';
-import getPosts from '@utils/getPosts';
+import getPosts from '../utils/getPosts';
 
 const Index = ({ posts, title, description, ...props }) => {
-  console.log('the props: ', props)
   return (
     <>
       <Layout pageTitle={title} description={description}>
