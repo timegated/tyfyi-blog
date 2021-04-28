@@ -31,4 +31,126 @@ Under the hood here webpack is doing some bundling. Bundling is basically recomp
 
 There is a lot to unpack as far delving into what react-scripts is doing, there are many files and functions that are doing a lot of heavy lifting in the background whenever you run one of the above commands in your terminal. 
 
-Webpack works in tandem with a few other tools to accomplish this bundling, namely babel. Babel is for transpiling, which means that any javascript you write that contains newer features will be "backported" or recompiled into a version that works in any environment. The idea here is taking into consideration cross-browser and cross-internet-capacity (not everyone has great internet) by default when developing apps user modern techniques. 
+Webpack works in tandem with a few other tools to accomplish this bundling, namely babel. Babel is for transpiling, which means that any javascript you write that contains newer features will be "backported" or recompiled into a version that works with older browsers. The idea here is taking into consideration cross-browser and cross-internet-capacity (not everyone has great internet) by default when developing apps using modern techniques.
+
+So what set up do I use? 
+
+Webpack works with entry points and templates (for html files). If you don't specify a template that's also fine, it will generate one for you. For the JS an index.js file must be specified as the main point where any other JS you write will be bundled. 
+
+I generally start with three different config files, a common, dev, and production configuration. The common config specifies the main JS file, the html template, and the image loader. Dev config looks for the bundle currently being loaded as well as a template and modules for loading css. 
+
+Common:
+```js
+const path = require("path");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: {
+    main: "./src/js/index.js",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        use: ["html-loader"]
+      },
+      {
+        test: /\.(svg|png|jpg|gif|pdf)$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "imgs",
+          },
+        },
+      },
+    ],
+  },
+};
+```
+Dev:
+```js
+const path = require("path");
+const common = require("./webpack.common");
+const { merge } = require("webpack-merge");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = merge(common, {
+  mode: "development",
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist")
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      },
+    ],
+  },
+});
+```
+
+Finally the production config, when you're ready to run your build command, looks for filename, content hash, and uses a few plugins to both minify the code, remove whitespace and comments, and optimize your css output. Ultimately what the prod config file does is reduce the size of all your files and outputs them in an uglified way. 
+
+Prod: 
+```js
+const path = require("path");
+const common = require("./webpack.common");
+const { merge } = require("webpack-merge");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = merge(common, {
+  mode: "production",
+  output: {
+    filename: "[name].[contentHash].bundle.js",
+    path: path.resolve(__dirname, "dist")
+  },
+  optimization: {
+    minimizer: [
+      new OptimizeCssAssetsPlugin(),
+      new TerserPlugin(),
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      })
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
+    new CleanWebpackPlugin()
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader, 
+          "css-loader", 
+          "sass-loader",
+        ],
+      },
+    ],
+  },
+});
+```
+
+This is basically everything I ever need when building a site or app with webpack and I've used this config for my portfolio site.
