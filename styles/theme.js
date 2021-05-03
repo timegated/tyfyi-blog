@@ -43,6 +43,12 @@ const theme = {
     md: '720px',
     lg: '1080px',
     xlg: '1650px'
+  },
+  border_radius: {
+    small: '10px',
+    med: '20px',
+    reg: '30px',
+    large: '40px'
   }
 }
 

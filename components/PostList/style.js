@@ -17,7 +17,7 @@ export const List = styled.ul`
     margin-bottom: 0.5rem;
     padding: 1.5rem 0.25rem;
     border-radius: 10px;
-    box-shadow: 1px 2px 0.25em ${({theme}) => theme.color.accents.primary};
+    box-shadow: 0 2px 0.25em ${({theme}) => theme.color.accents.primary};
     max-width: 100%;
 
     a {
