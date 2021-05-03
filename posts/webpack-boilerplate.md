@@ -101,7 +101,7 @@ module.exports = merge(common, {
 });
 ```
 
-Finally the production config, when you're ready to run your build command, looks for filename, content hash, and uses a few plugins to both minify the code, remove whitespace and comments, and optimize your css output. Ultimately what the prod config file does is reduce the size of all your files and outputs them in an uglified way. 
+Finally the production config, when you're ready to run your build command, looks for filename, content hash, and uses a few plugins to both minify the code, remove whitespace and comments, and optimize your css output. Ultimately what the prod config file does is reduce the size of all your files and outputs them in an minified way. 
 
 Prod: 
 ```js
