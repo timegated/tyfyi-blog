@@ -6,6 +6,7 @@ import getSlugs from '../../utils/getSlugs';
 import CodeBlock from '../../components/common/codeblock';
 import Link from 'next/link';
 import { Container } from '../../components/globalStyles/global';
+
 const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
   return (
     <>
