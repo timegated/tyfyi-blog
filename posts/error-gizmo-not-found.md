@@ -20,11 +20,12 @@ There are two instances in particular with respect to Gizmo's life that came to 
 
 The second instance involved another friend who was dying of cancer. The day before I found out he was having another surgery I randomly texted him a picture of Gizmo to try to cheer him up:
 
-[![Gizmo-Smiling.exe](https://github.com/timegated/tyfyi-blog/blob/master/public/gizmo-exe-2.jpg?raw=true)](Gizmo Smiling)
+[![Gizmo-Smiling.exe](https://github.com/timegated/tyfyi-blog/blob/master/public/gizmo-exe-2.jpg?raw=true)](Gizmo-Smiling)
 
 After he saw the picture he called me later and said, "Hey bud, that's a nice cat", his condition had taken a turn for the worst and there was a good chance this would be the last phone call we would have. The next day I called his number with the hope that he would answer but someone else picked up the phone (his sister) and confirmed the worst. Suddenly, and without warning.
 
-Suddenly, and without warning. That more or less sums up the life of my cat who, in my mind, I considered a friend or at least the representative of someone I cared about deeply. Shortly after the funeral we picked and left for Los Angeles, California. Gizmo got to fly on a plane in coach (pretty good for a cat that came from the streets of South Philadelphia). She got to experience all the nice weather here. All in all she got to experience all the changes that come from living with people who care, who know what love is. She was with me when I decided to change my life, every step of the way. I'm not going to say that I couldn't have done it without her, but she sure made things a whole lot easier, in ways I didn't realize until now. So thank you Gizmo. You weren't just a cat you were a character.
+Suddenly, and without warning. That more or less sums up the life of my cat who, in my mind, I considered a friend or at least the representative of someone I cared about deeply. Shortly after the funeral we picked up and left for Los Angeles, California. Gizmo got to fly on a plane in coach (pretty good for a cat that came from the streets of South Philadelphia). She got to experience all the nice weather here. All in all she got to experience all the changes that come from living with people who care. She was with me when I decided to change my life, every step of the way. I'm not going to say that I couldn't have done it without her, but she sure made things a whole lot easier, in ways I didn't realize until now. So thank you Gizmo. You weren't just a cat you were a character.
 
 **P.S.**
-Say Hi to Anthony and David for me if you see them around, wherever you wind up.
+
+Say Hi to my friends for me if you see them around, wherever you wind up.

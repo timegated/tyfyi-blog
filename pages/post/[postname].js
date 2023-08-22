@@ -23,11 +23,18 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
                   src,
                   title,
                 }) => (
+                  <div style={{ display: "flex", justifyContent: "center" }}>
                   <img
                     alt={alt}
                     src={src}
                     title={title}
-                    style={{ maxWidth: 475 }} />
+                    style={{ 
+                      maxWidth: 800,
+                      height: 500,
+                      borderRadius: 8,
+                      cursor: "default"
+                      }} />
+                  </div>
                 ),
                 code: CodeBlock,
                 link: ({ children, href }) => {
