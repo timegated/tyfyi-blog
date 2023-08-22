@@ -3,7 +3,7 @@ title: 'Error Gizmo.exe Not Found'
 date: '2023-08-22'
 ---
 
-[![Gizmo.exe](../public/gizmo-exe.jpg)](Gizmo)
+[![Gizmo.exe](https://github.com/timegated/tyfyi-blog/blob/master/public/gizmo-exe.jpg?raw=true)](Gizmo)
 
 
 I lost my cat of six years yesterday in a very frightening and abrupt way. She had been having some trouble breathing the Friday before the start of the week but she had always been weezing here and there since the day we got her so my wife and I didn't think much of it and hoped it would improve on it's own. 
@@ -20,7 +20,7 @@ There are two instances in particular with respect to Gizmo's life that came to 
 
 The second instance involved another friend who was dying of cancer. The day before I found out he was having another surgery I randomly texted him a picture of Gizmo to try to cheer him up:
 
-[![Gizmo.exe-smiling](../public/gizmo-exe-2.jpg)](Gizmo)
+[![Gizmo.exe-smiling][(https://github.com/timegated/tyfyi-blog/blob/master/public/gizmo-exe.jpg?raw=true)](Gizmo Smiling)
 
 After he saw the picture he called me later and said, "Hey bud, that's a nice cat", his condition had taken a turn for the worst and there was a good chance this would be the last phone call we would have. The next day I called his number with the hope that he would answer but someone else picked up the phone (his sister) and confirmed the worst. Suddenly, and without warning.
 
