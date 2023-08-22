@@ -14,6 +14,7 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
         <Container>
           <h1>{frontmatter.title}</h1>
           <span>{frontmatter.date}</span>
+          <a href="https://tyfyi.blog" style={{marginLeft: "1rem"}}>Home</a>
           <ReactMarkdown source={markdownBody}
             allowDangerousHtml
             renderers={
@@ -23,7 +24,7 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
                   src,
                   title,
                 }) => (
-                  <div style={{ display: "flex", justifyContent: "center" }}>
+                  <div style={{ display: "flex", justifyContent: "center", cursor: "not-allowed" }}>
                   <img
                     alt={alt}
                     src={src}
@@ -32,7 +33,7 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
                       maxWidth: 800,
                       height: 500,
                       borderRadius: 8,
-                      cursor: "default"
+                      cursor: "not-allowed"
                       }} />
                   </div>
                 ),
