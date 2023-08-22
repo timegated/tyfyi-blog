@@ -20,7 +20,7 @@ There are two instances in particular with respect to Gizmo's life that came to 
 
 The second instance involved another friend who was dying of cancer. The day before I found out he was having another surgery I randomly texted him a picture of Gizmo to try to cheer him up:
 
-[![Gizmo.exe-smiling][(https://github.com/timegated/tyfyi-blog/blob/master/public/gizmo-exe.jpg?raw=true)](Gizmo Smiling)
+[![Gizmo-Smiling.exe](https://github.com/timegated/tyfyi-blog/blob/master/public/gizmo-exe-2.jpg?raw=true)](Gizmo Smiling)
 
 After he saw the picture he called me later and said, "Hey bud, that's a nice cat", his condition had taken a turn for the worst and there was a good chance this would be the last phone call we would have. The next day I called his number with the hope that he would answer but someone else picked up the phone (his sister) and confirmed the worst. Suddenly, and without warning.
 

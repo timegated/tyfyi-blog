@@ -18,6 +18,17 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
             allowDangerousHtml
             renderers={
               {
+                image: ({
+                  alt,
+                  src,
+                  title,
+                }) => (
+                  <img
+                    alt={alt}
+                    src={src}
+                    title={title}
+                    style={{ maxWidth: 475 }} />
+                ),
                 code: CodeBlock,
                 link: ({ children, href }) => {
                   return <Link href={href}>
