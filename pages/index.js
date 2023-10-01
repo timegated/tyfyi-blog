@@ -8,7 +8,7 @@ const Index = ({ posts, title, description, ...props }) => {
   return (
     <>
       <Layout pageTitle={title} description={description}>
-        <Banner title="Thank You For Your Interest" sub="Some basic and not so basic stuff in the world of web development" />
+        <Banner title="Thank You For Your Interest" sub="Some basic and not so basic stuff when your writing software for the web" />
         <Container>
           <main>
             <PostList posts={posts} />
