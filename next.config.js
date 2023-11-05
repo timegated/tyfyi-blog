@@ -9,4 +9,5 @@ module.exports = {
   compiler: {
     styledComponents: true
   },
+  export: "standalone"
 }
