@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/timegated/tyfyi-blog#readme",
   "dependencies": {
-    "gray-matter": "^4.0.2",
+    "gray-matter": "^4.0.3",
     "next": "^14.0.1",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
@@ -28,7 +28,8 @@
     "react-feather": "^2.0.10",
     "react-markdown": "^9.0.0",
     "react-syntax-highlighter": "^15.5.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.41.1"

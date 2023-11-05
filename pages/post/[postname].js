@@ -3,7 +3,6 @@ import matter from 'gray-matter';
 import Markdown from 'react-markdown';
 import Layout from '../../components/common/layout';
 import getSlugs from '../../utils/getSlugs';
-import CodeBlock from '../../components/common/codeblock';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
@@ -21,25 +20,26 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
           <Markdown
             components={
               {
-                image: ({
+                img({
                   alt,
                   src,
                   title,
-                }) => (
-                  <div style={{ display: "flex", justifyContent: "center", cursor: "not-allowed" }}>
-                    <img
-                      alt={alt}
-                      src={src}
-                      title={title}
-                      style={{
-                        maxWidth: 800,
-                        height: 500,
-                        borderRadius: 8,
-                        cursor: "not-allowed"
-                      }} />
-                  </div>
-                ),
-                // code: CodeBlock,
+                }) {
+                  return (
+                    <div style={{ display: "flex", justifyContent: "center", cursor: "not-allowed" }}>
+                      <img
+                        alt={alt}
+                        src={src}
+                        title={title}
+                        style={{
+                          maxWidth: 800,
+                          height: 500,
+                          borderRadius: 8,
+                          cursor: "not-allowed"
+                        }} />
+                    </div>
+                  )
+                },
                 code(props) {
                   const { children, className, node, ...rest } = props
                   const match = /language-(\w+)/.exec(className || '')
@@ -57,7 +57,7 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
                     </code>
                   )
                 },
-                link: ({ children, href }) => {
+                Link: ({ children, href }) => {
                   return <Link href={href}>
                     <a>{children}</a>
                   </Link>

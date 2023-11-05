@@ -1,7 +1,8 @@
 import matter from 'gray-matter';
 
 const getPosts = (context) => {
-  const keys = context.keys();
+  const keys = context.keys().filter((key) => key.startsWith('./'));
+  console.log(keys)
   const values = keys.map(context);
 
   const data = keys.map((key, index) => {
