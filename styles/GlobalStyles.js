@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    background-color: ${({theme}) => theme.color.main.graysix};
   }
 
   ::-webkit-scrollbar {

@@ -38,3 +38,7 @@ function nameAndNumber (name: string, number: number) {
 With typescript (once you have everything configured that is), you can declare the type of the parameter within the parenthesis. This negates the need for an if-check for the values of arguments (not to mean this completely removes the need for conditionals). 
 
 Since typescript is a superset of javascript there is a compile step because browsers can only process javascript. The compilation step here is really where the magic happens as far as adding a layer of safety and increaing the reliability of your application. It's here that bugs are caught since if a value doesn't match it's given type an error will be thrown such as if we tried to pass a number to the name parameter.
+
+
+
+

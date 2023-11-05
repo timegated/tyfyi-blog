@@ -4,7 +4,7 @@ import getPosts from '../utils/getPosts';
 import { Container } from '../components/globalStyles/global';
 import Banner from '../components/Banner/Banner';
 
-const Index = ({ posts, title, description, ...props }) => {
+const Index = ({ posts, title, description }) => {
   return (
     <>
       <Layout pageTitle={title} description={description}>

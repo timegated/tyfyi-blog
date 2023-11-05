@@ -5,7 +5,7 @@ date: '2023-08-23'
 
 **Intro: What is a Microservice?**
 
-In a nutshell microservice is a self-contained piece of software that talks to other applications as part of a larger distributed system.
+In a nutshell microservice is a self-contained piece of software that talks to other applications as part of a larger distributed system. In other words it's basically the idea of composable backend services that "talk" to each other to achieve a certain objective, usually a business objective.
 
 I tend to think of it like cell. Each individual cell has a job that it performs as part of a larger collection of smaller parts that make up a complex whole. It helps sometimes to use basic examples to structure thinking around the "why" related to doing something like a microservice. There's something very human about this way of thinking about what machines do with the code we write.
 
@@ -88,4 +88,6 @@ func getAlbumByID(c *gin.Context) {
 }
 ```
 
-We deploy something like this, expose the routes to our network, and then call those routes from other services for different uses.
+We deploy something like this, expose the routes to our network, and then call those routes from other services for different uses. Exposing these routes over a network allows us to connect this service with other services to do something with the data it sends.
+
+This other service could be written in Javascript, Python, Java, Python, C# or whatever backend language is suitable for the task at hand or that you're comfortable with, as long as an endpoint (basically a url) is exposed and is accessible by another backend service.

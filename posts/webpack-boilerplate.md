@@ -153,4 +153,8 @@ module.exports = merge(common, {
 });
 ```
 
-This is basically the starting point for me when building a site or app with webpack and I've used this config for my portfolio site. 
+This is basically the starting point for me when building a site or app with webpack and I've used this config for my portfolio site.
+
+
+
+

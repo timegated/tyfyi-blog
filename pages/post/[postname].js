@@ -1,9 +1,12 @@
 import React from 'react';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown/with-html';
+import Markdown from 'react-markdown';
 import Layout from '../../components/common/layout';
 import getSlugs from '../../utils/getSlugs';
 import CodeBlock from '../../components/common/codeblock';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
 import Link from 'next/link';
 import { Container } from '../../components/globalStyles/global';
 
@@ -14,10 +17,9 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
         <Container>
           <h1>{frontmatter.title}</h1>
           <span>{frontmatter.date}</span>
-          <a href="https://tyfyi.blog" style={{marginLeft: "1rem"}}>Home</a>
-          <ReactMarkdown source={markdownBody}
-            allowDangerousHtml
-            renderers={
+          <a href="https://tyfyi.blog" style={{ marginLeft: "1rem" }}>Home</a>
+          <Markdown
+            components={
               {
                 image: ({
                   alt,
@@ -25,25 +27,44 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
                   title,
                 }) => (
                   <div style={{ display: "flex", justifyContent: "center", cursor: "not-allowed" }}>
-                  <img
-                    alt={alt}
-                    src={src}
-                    title={title}
-                    style={{ 
-                      maxWidth: 800,
-                      height: 500,
-                      borderRadius: 8,
-                      cursor: "not-allowed"
+                    <img
+                      alt={alt}
+                      src={src}
+                      title={title}
+                      style={{
+                        maxWidth: 800,
+                        height: 500,
+                        borderRadius: 8,
+                        cursor: "not-allowed"
                       }} />
                   </div>
                 ),
-                code: CodeBlock,
+                // code: CodeBlock,
+                code(props) {
+                  const { children, className, node, ...rest } = props
+                  const match = /language-(\w+)/.exec(className || '')
+                  return match ? (
+                    <SyntaxHighlighter
+                      {...rest}
+                      children={String(children).replace(/\n$/, '')}
+                      style={okaidia}
+                      language={match[1]}
+                      PreTag="div"
+                    />
+                  ) : (
+                    <code {...rest} className={className}>
+                      {children}
+                    </code>
+                  )
+                },
                 link: ({ children, href }) => {
                   return <Link href={href}>
                     <a>{children}</a>
                   </Link>
                 }
-              }} />
+              }}>
+            {markdownBody}
+          </Markdown>
         </Container>
       </Layout>
     </>

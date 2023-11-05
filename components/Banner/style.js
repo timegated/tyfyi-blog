@@ -4,8 +4,7 @@ import { Container } from '../globalStyles/global';
 export const BannerContainer = styled.section`
   background: ${({ theme }) => theme.color.main.grayseven};
   padding: 2.5rem 1.65rem;
-  border-bottom-left-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
+  box-shadow: 0.1rem 0.1rem 0.25rem 0.1rem ${({theme}) => theme.color.accents.secondary};
   width: 100%;
   text-align: center;
 `;
